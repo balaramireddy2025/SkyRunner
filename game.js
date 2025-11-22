@@ -211,206 +211,167 @@ const levelData = {
     },
     3: {
         platforms: [
-            { x: 0, y: 420, width: 120, height: 20 },
-            { x: 200, y: 370, width: 80, height: 20 },
-            { x: 350, y: 320, width: 80, height: 20 },
-            { x: 500, y: 270, width: 80, height: 20 },
-            { x: 650, y: 320, width: 80, height: 20 },
-            { x: 800, y: 220, width: 100, height: 20 },
-            { x: 1000, y: 270, width: 80, height: 20 },
-            { x: 1150, y: 320, width: 80, height: 20 },
-            { x: 1300, y: 220, width: 100, height: 20 },
-            { x: 1500, y: 270, width: 80, height: 20 },
-            { x: 1650, y: 320, width: 80, height: 20 },
-            { x: 1800, y: 220, width: 120, height: 20 }
+            { x: 0, y: 420, width: 150, height: 20 },
+            { x: 250, y: 380, width: 120, height: 20 },
+            { x: 450, y: 340, width: 120, height: 20 },
+            { x: 650, y: 300, width: 120, height: 20 },
+            { x: 850, y: 340, width: 120, height: 20 },
+            { x: 1050, y: 280, width: 130, height: 20 },
+            { x: 1250, y: 320, width: 120, height: 20 },
+            { x: 1450, y: 360, width: 120, height: 20 },
+            { x: 1650, y: 300, width: 130, height: 20 },
+            { x: 1850, y: 340, width: 150, height: 20 }
         ],
         obstacles: [
-            { x: 300, y: 350, width: 30, height: 40, type: 'spike' },
-            { x: 450, y: 300, width: 30, height: 40, type: 'spike' },
-            { x: 600, y: 250, width: 30, height: 40, type: 'spike' },
-            { x: 750, y: 300, width: 30, height: 40, type: 'spike' },
-            { x: 950, y: 200, width: 30, height: 40, type: 'spike' },
-            { x: 1100, y: 250, width: 30, height: 40, type: 'spike' },
-            { x: 1250, y: 300, width: 30, height: 40, type: 'spike' },
-            { x: 1400, y: 200, width: 30, height: 40, type: 'spike' }
+            { x: 400, y: 360, width: 30, height: 40, type: 'spike' },
+            { x: 600, y: 320, width: 30, height: 40, type: 'spike' },
+            { x: 800, y: 360, width: 30, height: 40, type: 'spike' },
+            { x: 1100, y: 300, width: 30, height: 40, type: 'spike' },
+            { x: 1300, y: 340, width: 30, height: 40, type: 'spike' },
+            { x: 1500, y: 380, width: 30, height: 40, type: 'spike' }
         ],
         enemies: [
-            { x: 400, y: 300, width: 30, height: 30, speed: 2.5, direction: 1, patrolStart: 350, patrolEnd: 500 },
-            { x: 700, y: 300, width: 30, height: 30, speed: 2.5, direction: 1, patrolStart: 650, patrolEnd: 800 },
-            { x: 1050, y: 250, width: 30, height: 30, speed: 2.5, direction: 1, patrolStart: 1000, patrolEnd: 1150 },
-            { x: 1350, y: 200, width: 30, height: 30, speed: 2.5, direction: 1, patrolStart: 1300, patrolEnd: 1500 }
+            { x: 500, y: 320, width: 30, height: 30, speed: 2, direction: 1, patrolStart: 450, patrolEnd: 650 },
+            { x: 900, y: 320, width: 30, height: 30, speed: 2, direction: 1, patrolStart: 850, patrolEnd: 1050 },
+            { x: 1300, y: 300, width: 30, height: 30, speed: 2, direction: 1, patrolStart: 1250, patrolEnd: 1450 }
         ],
         powerUps: [
-            { x: 550, y: 220, type: 'health' },
-            { x: 1200, y: 170, type: 'speed' }
+            { x: 700, y: 250, type: 'health' },
+            { x: 1400, y: 250, type: 'speed' }
         ],
         movingPlatforms: [
-            { x: 900, y: 320, width: 80, height: 15, speedX: 0, speedY: -2, rangeY: 100, startY: 320 }
+            { x: 1000, y: 360, width: 100, height: 15, speedX: 0, speedY: -1.5, rangeY: 80, startY: 360 }
         ],
-        collectibles: 15,
-        levelEndX: 2000,
+        collectibles: 16,
+        levelEndX: 2100,
         background: { top: '#FF6B6B', mid: '#FFA07A', bottom: '#FFD700' }
     },
     4: {
         platforms: [
-            { x: 0, y: 420, width: 100, height: 20 },
-            { x: 180, y: 370, width: 70, height: 20 },
-            { x: 320, y: 320, width: 70, height: 20 },
-            { x: 460, y: 270, width: 70, height: 20 },
-            { x: 600, y: 320, width: 70, height: 20 },
-            { x: 740, y: 220, width: 80, height: 20 },
-            { x: 900, y: 270, width: 70, height: 20 },
-            { x: 1040, y: 320, width: 70, height: 20 },
-            { x: 1180, y: 220, width: 80, height: 20 },
-            { x: 1320, y: 270, width: 70, height: 20 },
-            { x: 1460, y: 320, width: 70, height: 20 },
-            { x: 1600, y: 220, width: 80, height: 20 },
-            { x: 1740, y: 270, width: 70, height: 20 },
-            { x: 1880, y: 320, width: 100, height: 20 }
+            { x: 0, y: 420, width: 140, height: 20 },
+            { x: 240, y: 380, width: 110, height: 20 },
+            { x: 430, y: 340, width: 110, height: 20 },
+            { x: 620, y: 300, width: 110, height: 20 },
+            { x: 810, y: 340, width: 110, height: 20 },
+            { x: 1000, y: 280, width: 120, height: 20 },
+            { x: 1200, y: 320, width: 110, height: 20 },
+            { x: 1400, y: 360, width: 110, height: 20 },
+            { x: 1590, y: 300, width: 120, height: 20 },
+            { x: 1790, y: 340, width: 110, height: 20 },
+            { x: 1980, y: 380, width: 140, height: 20 }
         ],
         obstacles: [
-            { x: 250, y: 350, width: 30, height: 40, type: 'spike' },
-            { x: 390, y: 300, width: 30, height: 40, type: 'spike' },
-            { x: 530, y: 250, width: 30, height: 40, type: 'spike' },
-            { x: 670, y: 300, width: 30, height: 40, type: 'spike' },
-            { x: 890, y: 200, width: 30, height: 40, type: 'spike' },
-            { x: 1030, y: 250, width: 30, height: 40, type: 'spike' },
-            { x: 1170, y: 300, width: 30, height: 40, type: 'spike' },
-            { x: 1310, y: 200, width: 30, height: 40, type: 'spike' },
-            { x: 1450, y: 250, width: 30, height: 40, type: 'spike' },
-            { x: 1590, y: 300, width: 30, height: 40, type: 'spike' }
+            { x: 380, y: 360, width: 30, height: 40, type: 'spike' },
+            { x: 570, y: 320, width: 30, height: 40, type: 'spike' },
+            { x: 760, y: 360, width: 30, height: 40, type: 'spike' },
+            { x: 1050, y: 300, width: 30, height: 40, type: 'spike' },
+            { x: 1250, y: 340, width: 30, height: 40, type: 'spike' },
+            { x: 1450, y: 380, width: 30, height: 40, type: 'spike' },
+            { x: 1640, y: 320, width: 30, height: 40, type: 'spike' }
         ],
         enemies: [
-            { x: 350, y: 300, width: 30, height: 30, speed: 3, direction: 1, patrolStart: 320, patrolEnd: 460 },
-            { x: 650, y: 300, width: 30, height: 30, speed: 3, direction: 1, patrolStart: 600, patrolEnd: 740 },
-            { x: 950, y: 250, width: 30, height: 30, speed: 3, direction: 1, patrolStart: 900, patrolEnd: 1040 },
-            { x: 1250, y: 250, width: 30, height: 30, speed: 3, direction: 1, patrolStart: 1180, patrolEnd: 1320 },
-            { x: 1550, y: 200, width: 30, height: 30, speed: 3, direction: 1, patrolStart: 1600, patrolEnd: 1740 }
+            { x: 480, y: 320, width: 30, height: 30, speed: 2.2, direction: 1, patrolStart: 430, patrolEnd: 620 },
+            { x: 860, y: 320, width: 30, height: 30, speed: 2.2, direction: 1, patrolStart: 810, patrolEnd: 1000 },
+            { x: 1250, y: 300, width: 30, height: 30, speed: 2.2, direction: 1, patrolStart: 1200, patrolEnd: 1400 },
+            { x: 1640, y: 280, width: 30, height: 30, speed: 2.2, direction: 1, patrolStart: 1590, patrolEnd: 1790 }
         ],
         powerUps: [
-            { x: 500, y: 220, type: 'jump' },
-            { x: 1100, y: 170, type: 'health' },
-            { x: 1700, y: 170, type: 'shield' }
+            { x: 650, y: 250, type: 'jump' },
+            { x: 1350, y: 250, type: 'health' },
+            { x: 1850, y: 250, type: 'shield' }
         ],
         movingPlatforms: [
-            { x: 800, y: 320, width: 70, height: 15, speedX: 0, speedY: -2, rangeY: 120, startY: 320 },
-            { x: 1400, y: 270, width: 70, height: 15, speedX: 0, speedY: -2, rangeY: 120, startY: 270 }
+            { x: 950, y: 360, width: 90, height: 15, speedX: 0, speedY: -1.8, rangeY: 90, startY: 360 },
+            { x: 1550, y: 340, width: 90, height: 15, speedX: 0, speedY: -1.8, rangeY: 90, startY: 340 }
         ],
         collectibles: 18,
-        levelEndX: 2100,
+        levelEndX: 2200,
         background: { top: '#2C3E50', mid: '#34495E', bottom: '#5D6D7E' }
     },
     5: {
         platforms: [
-            { x: 0, y: 420, width: 80, height: 20 },
-            { x: 150, y: 370, width: 60, height: 20 },
-            { x: 280, y: 320, width: 60, height: 20 },
-            { x: 410, y: 270, width: 60, height: 20 },
-            { x: 540, y: 320, width: 60, height: 20 },
-            { x: 670, y: 220, width: 70, height: 20 },
-            { x: 810, y: 270, width: 60, height: 20 },
-            { x: 940, y: 320, width: 60, height: 20 },
-            { x: 1070, y: 220, width: 70, height: 20 },
-            { x: 1210, y: 270, width: 60, height: 20 },
-            { x: 1340, y: 320, width: 60, height: 20 },
-            { x: 1470, y: 220, width: 70, height: 20 },
-            { x: 1610, y: 270, width: 60, height: 20 },
-            { x: 1740, y: 320, width: 60, height: 20 },
-            { x: 1870, y: 220, width: 80, height: 20 }
+            { x: 0, y: 420, width: 130, height: 20 },
+            { x: 230, y: 380, width: 100, height: 20 },
+            { x: 410, y: 340, width: 100, height: 20 },
+            { x: 590, y: 300, width: 100, height: 20 },
+            { x: 770, y: 340, width: 100, height: 20 },
+            { x: 950, y: 280, width: 110, height: 20 },
+            { x: 1140, y: 320, width: 100, height: 20 },
+            { x: 1320, y: 360, width: 100, height: 20 },
+            { x: 1500, y: 300, width: 110, height: 20 },
+            { x: 1690, y: 340, width: 100, height: 20 },
+            { x: 1870, y: 380, width: 130, height: 20 }
         ],
         obstacles: [
-            { x: 220, y: 350, width: 30, height: 40, type: 'spike' },
-            { x: 350, y: 300, width: 30, height: 40, type: 'spike' },
-            { x: 480, y: 250, width: 30, height: 40, type: 'spike' },
-            { x: 610, y: 300, width: 30, height: 40, type: 'spike' },
-            { x: 740, y: 200, width: 30, height: 40, type: 'spike' },
-            { x: 870, y: 250, width: 30, height: 40, type: 'spike' },
+            { x: 360, y: 360, width: 30, height: 40, type: 'spike' },
+            { x: 540, y: 320, width: 30, height: 40, type: 'spike' },
+            { x: 720, y: 360, width: 30, height: 40, type: 'spike' },
             { x: 1000, y: 300, width: 30, height: 40, type: 'spike' },
-            { x: 1130, y: 200, width: 30, height: 40, type: 'spike' },
-            { x: 1260, y: 250, width: 30, height: 40, type: 'spike' },
-            { x: 1390, y: 300, width: 30, height: 40, type: 'spike' },
-            { x: 1520, y: 200, width: 30, height: 40, type: 'spike' },
-            { x: 1650, y: 250, width: 30, height: 40, type: 'spike' }
+            { x: 1190, y: 340, width: 30, height: 40, type: 'spike' },
+            { x: 1370, y: 380, width: 30, height: 40, type: 'spike' },
+            { x: 1550, y: 320, width: 30, height: 40, type: 'spike' },
+            { x: 1740, y: 360, width: 30, height: 40, type: 'spike' }
         ],
         enemies: [
-            { x: 320, y: 300, width: 30, height: 30, speed: 3.5, direction: 1, patrolStart: 280, patrolEnd: 410 },
-            { x: 580, y: 300, width: 30, height: 30, speed: 3.5, direction: 1, patrolStart: 540, patrolEnd: 670 },
-            { x: 850, y: 250, width: 30, height: 30, speed: 3.5, direction: 1, patrolStart: 810, patrolEnd: 940 },
-            { x: 1120, y: 200, width: 30, height: 30, speed: 3.5, direction: 1, patrolStart: 1070, patrolEnd: 1210 },
-            { x: 1390, y: 250, width: 30, height: 30, speed: 3.5, direction: 1, patrolStart: 1340, patrolEnd: 1470 },
-            { x: 1660, y: 200, width: 30, height: 30, speed: 3.5, direction: 1, patrolStart: 1610, patrolEnd: 1740 }
+            { x: 460, y: 320, width: 30, height: 30, speed: 2.5, direction: 1, patrolStart: 410, patrolEnd: 590 },
+            { x: 820, y: 320, width: 30, height: 30, speed: 2.5, direction: 1, patrolStart: 770, patrolEnd: 950 },
+            { x: 1210, y: 300, width: 30, height: 30, speed: 2.5, direction: 1, patrolStart: 1140, patrolEnd: 1320 },
+            { x: 1570, y: 280, width: 30, height: 30, speed: 2.5, direction: 1, patrolStart: 1500, patrolEnd: 1690 }
         ],
         powerUps: [
-            { x: 450, y: 220, type: 'health' },
-            { x: 780, y: 170, type: 'speed' },
-            { x: 1110, y: 150, type: 'jump' },
-            { x: 1440, y: 170, type: 'shield' }
+            { x: 600, y: 250, type: 'health' },
+            { x: 1100, y: 230, type: 'jump' },
+            { x: 1600, y: 250, type: 'speed' }
         ],
         movingPlatforms: [
-            { x: 700, y: 320, width: 60, height: 15, speedX: 0, speedY: -2.5, rangeY: 150, startY: 320 },
-            { x: 1030, y: 270, width: 60, height: 15, speedX: 0, speedY: -2.5, rangeY: 150, startY: 270 },
-            { x: 1360, y: 320, width: 60, height: 15, speedX: 0, speedY: -2.5, rangeY: 150, startY: 320 },
-            { x: 1690, y: 270, width: 60, height: 15, speedX: 0, speedY: -2.5, rangeY: 150, startY: 270 }
+            { x: 850, y: 360, width: 80, height: 15, speedX: 0, speedY: -2, rangeY: 100, startY: 360 },
+            { x: 1450, y: 340, width: 80, height: 15, speedX: 0, speedY: -2, rangeY: 100, startY: 340 }
         ],
         collectibles: 20,
-        levelEndX: 2200,
+        levelEndX: 2300,
         background: { top: '#8E44AD', mid: '#9B59B6', bottom: '#BB8FCE' }
     },
     6: {
         platforms: [
-            { x: 0, y: 420, width: 70, height: 20 },
-            { x: 120, y: 370, width: 60, height: 20 },
-            { x: 240, y: 320, width: 60, height: 20 },
-            { x: 360, y: 270, width: 60, height: 20 },
-            { x: 480, y: 320, width: 60, height: 20 },
-            { x: 600, y: 220, width: 70, height: 20 },
-            { x: 730, y: 270, width: 60, height: 20 },
-            { x: 850, y: 320, width: 60, height: 20 },
-            { x: 970, y: 220, width: 70, height: 20 },
-            { x: 1100, y: 270, width: 60, height: 20 },
-            { x: 1220, y: 320, width: 60, height: 20 },
-            { x: 1340, y: 220, width: 70, height: 20 },
-            { x: 1470, y: 270, width: 60, height: 20 },
-            { x: 1590, y: 320, width: 60, height: 20 },
-            { x: 1710, y: 220, width: 70, height: 20 },
-            { x: 1840, y: 270, width: 60, height: 20 },
-            { x: 1960, y: 320, width: 80, height: 20 }
+            { x: 0, y: 420, width: 120, height: 20 },
+            { x: 220, y: 380, width: 90, height: 20 },
+            { x: 390, y: 340, width: 90, height: 20 },
+            { x: 560, y: 300, width: 90, height: 20 },
+            { x: 730, y: 340, width: 90, height: 20 },
+            { x: 900, y: 280, width: 100, height: 20 },
+            { x: 1080, y: 320, width: 90, height: 20 },
+            { x: 1250, y: 360, width: 90, height: 20 },
+            { x: 1420, y: 300, width: 100, height: 20 },
+            { x: 1600, y: 340, width: 90, height: 20 },
+            { x: 1770, y: 380, width: 90, height: 20 },
+            { x: 1940, y: 320, width: 120, height: 20 }
         ],
         obstacles: [
-            { x: 200, y: 350, width: 30, height: 40, type: 'spike' },
-            { x: 320, y: 300, width: 30, height: 40, type: 'spike' },
-            { x: 440, y: 250, width: 30, height: 40, type: 'spike' },
-            { x: 560, y: 300, width: 30, height: 40, type: 'spike' },
-            { x: 680, y: 200, width: 30, height: 40, type: 'spike' },
-            { x: 800, y: 250, width: 30, height: 40, type: 'spike' },
-            { x: 920, y: 300, width: 30, height: 40, type: 'spike' },
-            { x: 1040, y: 200, width: 30, height: 40, type: 'spike' },
-            { x: 1160, y: 250, width: 30, height: 40, type: 'spike' },
-            { x: 1280, y: 300, width: 30, height: 40, type: 'spike' },
-            { x: 1400, y: 200, width: 30, height: 40, type: 'spike' },
-            { x: 1520, y: 250, width: 30, height: 40, type: 'spike' },
-            { x: 1640, y: 300, width: 30, height: 40, type: 'spike' },
-            { x: 1760, y: 200, width: 30, height: 40, type: 'spike' }
+            { x: 340, y: 360, width: 30, height: 40, type: 'spike' },
+            { x: 510, y: 320, width: 30, height: 40, type: 'spike' },
+            { x: 680, y: 360, width: 30, height: 40, type: 'spike' },
+            { x: 950, y: 300, width: 30, height: 40, type: 'spike' },
+            { x: 1130, y: 340, width: 30, height: 40, type: 'spike' },
+            { x: 1300, y: 380, width: 30, height: 40, type: 'spike' },
+            { x: 1470, y: 320, width: 30, height: 40, type: 'spike' },
+            { x: 1640, y: 360, width: 30, height: 40, type: 'spike' }
         ],
         enemies: [
-            { x: 280, y: 300, width: 30, height: 30, speed: 3.5, direction: 1, patrolStart: 240, patrolEnd: 360 },
-            { x: 520, y: 300, width: 30, height: 30, speed: 3.5, direction: 1, patrolStart: 480, patrolEnd: 600 },
-            { x: 760, y: 250, width: 30, height: 30, speed: 3.5, direction: 1, patrolStart: 730, patrolEnd: 850 },
-            { x: 1000, y: 200, width: 30, height: 30, speed: 3.5, direction: 1, patrolStart: 970, patrolEnd: 1100 },
-            { x: 1240, y: 250, width: 30, height: 30, speed: 3.5, direction: 1, patrolStart: 1220, patrolEnd: 1340 },
-            { x: 1480, y: 200, width: 30, height: 30, speed: 3.5, direction: 1, patrolStart: 1470, patrolEnd: 1590 },
-            { x: 1720, y: 250, width: 30, height: 30, speed: 3.5, direction: 1, patrolStart: 1710, patrolEnd: 1840 }
+            { x: 440, y: 320, width: 30, height: 30, speed: 2.8, direction: 1, patrolStart: 390, patrolEnd: 560 },
+            { x: 780, y: 320, width: 30, height: 30, speed: 2.8, direction: 1, patrolStart: 730, patrolEnd: 900 },
+            { x: 1150, y: 300, width: 30, height: 30, speed: 2.8, direction: 1, patrolStart: 1080, patrolEnd: 1250 },
+            { x: 1500, y: 280, width: 30, height: 30, speed: 2.8, direction: 1, patrolStart: 1420, patrolEnd: 1600 },
+            { x: 1830, y: 300, width: 30, height: 30, speed: 2.8, direction: 1, patrolStart: 1770, patrolEnd: 1940 }
         ],
         powerUps: [
-            { x: 400, y: 200, type: 'health' },
-            { x: 900, y: 150, type: 'shield' },
-            { x: 1500, y: 150, type: 'speed' }
+            { x: 600, y: 250, type: 'health' },
+            { x: 1100, y: 230, type: 'shield' },
+            { x: 1700, y: 250, type: 'speed' }
         ],
         movingPlatforms: [
-            { x: 650, y: 320, width: 60, height: 15, speedX: 0, speedY: -2.5, rangeY: 120, startY: 320 },
-            { x: 1050, y: 270, width: 60, height: 15, speedX: 0, speedY: -2.5, rangeY: 120, startY: 270 },
-            { x: 1450, y: 320, width: 60, height: 15, speedX: 0, speedY: -2.5, rangeY: 120, startY: 320 },
-            { x: 1850, y: 270, width: 60, height: 15, speedX: 0, speedY: -2.5, rangeY: 120, startY: 270 }
+            { x: 800, y: 360, width: 70, height: 15, speedX: 0, speedY: -2.2, rangeY: 110, startY: 360 },
+            { x: 1350, y: 340, width: 70, height: 15, speedX: 0, speedY: -2.2, rangeY: 110, startY: 340 },
+            { x: 1700, y: 360, width: 70, height: 15, speedX: 0, speedY: -2.2, rangeY: 110, startY: 360 }
         ],
         collectibles: 22,
         levelEndX: 2400,
