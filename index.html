@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyRunner - Epic Platform Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>SkyRunner</h1>
+            <p class="subtitle">Epic Platform Adventure</p>
+        </div>
+        
+        <div class="game-wrapper">
+            <canvas id="gameCanvas" width="836" height="470"></canvas>
+            <div class="game-overlay">
+                <div class="start-screen" id="startScreen">
+                    <h2>Welcome to SkyRunner!</h2>
+                    <p>Use Arrow Keys or WASD to move</p>
+                    <p>Press SPACE to jump</p>
+                    <button id="startButton">Start Game</button>
+                </div>
+                <div class="game-over-screen" id="gameOverScreen" style="display: none;">
+                    <h2>Game Over!</h2>
+                    <p>Final Score: <span id="finalScore">0</span></p>
+                    <p>Level Reached: <span id="finalLevel">1</span></p>
+                    <button id="restartButton">Play Again</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-info">
+            <div class="stats-left">
+                <div class="score-display">
+                    <span>Score: <span id="score">0</span></span>
+                </div>
+                <div class="level-display">
+                    <span>Level: <span id="level">1</span></span>
+                </div>
+            </div>
+            <div class="stats-center">
+                <div class="health-display">
+                    <span>Health: </span>
+                    <div class="health-bar">
+                        <div class="health-fill" id="healthFill"></div>
+                    </div>
+                    <span id="healthText">100%</span>
+                </div>
+                <div class="lives-display">
+                    <span>Lives: <span id="lives">3</span> ❤️</span>
+                </div>
+            </div>
+            <div class="stats-right">
+                <div class="audio-controls">
+                    <button id="musicToggle" class="audio-btn">🔊 Music</button>
+                    <button id="soundToggle" class="audio-btn">🔊 Sound</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="notification-container" id="notificationContainer"></div>
+        
+        <div class="level-complete-screen" id="levelCompleteScreen" style="display: none;">
+            <h2>Level Complete! 🎉</h2>
+            <p>Score: <span id="levelScore">0</span></p>
+            <p>Coins Collected: <span id="coinsCollected">0</span></p>
+            <button id="nextLevelButton">Next Level</button>
+        </div>
+    </div>
+    
+    <!-- Touch Controls for Mobile -->
+    <div class="touch-controls" id="touchControls">
+        <div class="touch-button" id="leftBtn">←</div>
+        <div class="touch-button" id="rightBtn">→</div>
+        <div class="touch-button jump" id="jumpBtn">↑</div>
+    </div>
+    
+    <!-- Poki SDK -->
+    <script src="https://game-cdn.poki.com/game-sdk/v2/poki-sdk.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
+
