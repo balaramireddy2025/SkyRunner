@@ -420,15 +420,15 @@ const levelData = {
             { x: 1750, y: 200, width: 30, height: 40, type: 'spike' }
         ],
         enemies: [
-            { x: 250, y: 300, width: 30, height: 30, speed: 4, direction: 1, patrolStart: 200, patrolEnd: 300 },
-            { x: 450, y: 300, width: 30, height: 30, speed: 4, direction: 1, patrolStart: 400, patrolEnd: 500 },
-            { x: 650, y: 250, width: 30, height: 30, speed: 4, direction: 1, patrolStart: 620, patrolEnd: 720 },
-            { x: 850, y: 200, width: 30, height: 30, speed: 4, direction: 1, patrolStart: 820, patrolEnd: 940 },
-            { x: 1050, y: 250, width: 30, height: 30, speed: 4, direction: 1, patrolStart: 1040, patrolEnd: 1140 },
-            { x: 1250, y: 200, width: 30, height: 30, speed: 4, direction: 1, patrolStart: 1260, patrolEnd: 1360 },
-            { x: 1450, y: 250, width: 30, height: 30, speed: 4, direction: 1, patrolStart: 1460, patrolEnd: 1580 },
-            { x: 1650, y: 200, width: 30, height: 30, speed: 4, direction: 1, patrolStart: 1680, patrolEnd: 1780 },
-            { x: 1850, y: 250, width: 30, height: 30, speed: 4, direction: 1, patrolStart: 1900, patrolEnd: 2000 }
+            { x: 215, y: 290, width: 30, height: 30, speed: 4, direction: 1, patrolStart: 200, patrolEnd: 250 },
+            { x: 415, y: 290, width: 30, height: 30, speed: 4, direction: 1, patrolStart: 400, patrolEnd: 450 },
+            { x: 635, y: 240, width: 30, height: 30, speed: 4, direction: 1, patrolStart: 620, patrolEnd: 670 },
+            { x: 835, y: 190, width: 30, height: 30, speed: 4, direction: 1, patrolStart: 820, patrolEnd: 880 },
+            { x: 1055, y: 290, width: 30, height: 30, speed: 4, direction: 1, patrolStart: 1040, patrolEnd: 1090 },
+            { x: 1275, y: 240, width: 30, height: 30, speed: 4, direction: 1, patrolStart: 1260, patrolEnd: 1310 },
+            { x: 1475, y: 190, width: 30, height: 30, speed: 4, direction: 1, patrolStart: 1460, patrolEnd: 1520 },
+            { x: 1695, y: 290, width: 30, height: 30, speed: 4, direction: 1, patrolStart: 1680, patrolEnd: 1730 },
+            { x: 1915, y: 240, width: 30, height: 30, speed: 4, direction: 1, patrolStart: 1900, patrolEnd: 1950 }
         ],
         powerUps: [
             { x: 350, y: 200, type: 'jump' },
@@ -841,6 +841,12 @@ function loadLevel(level) {
     levelStartX = 0;
     cameraX = 0;
     
+    // Reset player position immediately to prevent premature level completion
+    resetPlayer();
+    
+    // Position player on the first platform of the level
+    positionPlayerOnFirstPlatform();
+    
     // Create finish flag at end of level
     // Find the ground level near the end (use last platform or default)
     let flagY = 350; // Default Y position
@@ -881,7 +887,13 @@ function loadLevel(level) {
     // Update music tempo based on level
     currentMusicTempo = 600 - (level * 50);
     
-    resetPlayer();
+    // Ensure player is reset (already done above, but double-check)
+    if (player.x >= levelCompleteX) {
+        player.x = 100;
+        player.velocityX = 0;
+        player.velocityY = 0;
+    }
+    
     showNotification(`Level ${level} Started!`, 'info', 2000);
 }
 
@@ -1218,6 +1230,9 @@ function nextLevel() {
         return;
     }
     
+    // Reset player FIRST before changing game state
+    resetPlayer();
+    
     gameState = 'playing';
     document.getElementById('levelCompleteScreen').style.display = 'none';
     playerHealth = maxHealth;
@@ -1239,6 +1254,20 @@ function resetPlayer() {
     player.onGround = false;
     player.invulnerable = false;
     player.invulnerableTime = 0;
+}
+
+function positionPlayerOnFirstPlatform() {
+    // Position player on the first platform of the current level
+    const data = levelData[currentLevel];
+    if (data && data.platforms && data.platforms.length > 0) {
+        const firstPlatform = data.platforms[0];
+        // Position player on top of the first platform
+        player.x = Math.max(10, Math.min(firstPlatform.x + 10, firstPlatform.x + firstPlatform.width - player.width - 10));
+        player.y = firstPlatform.y - player.height;
+        player.onGround = true; // Player starts on ground
+        player.velocityX = 0;
+        player.velocityY = 0;
+    }
 }
 
 function toggleMusic() {
@@ -1288,6 +1317,7 @@ function loseLife() {
     } else {
         playerHealth = maxHealth;
         resetPlayer();
+        positionPlayerOnFirstPlatform();
         showNotification(`Life Lost! ${lives} lives remaining`, 'warning', 2000);
         updateUI();
     }
@@ -1506,7 +1536,9 @@ function updatePhysics() {
         }
     }
     
-    if (player.x >= levelCompleteX) {
+    // Only check level completion if player is actually moving forward (not just spawned)
+    // This prevents immediate completion when level loads
+    if (player.x >= levelCompleteX && player.velocityX >= 0 && player.x > 150) {
         // Create celebration particles at flag
         if (finishFlag) {
             for (let i = 0; i < 30; i++) {
@@ -1523,6 +1555,7 @@ function updatePhysics() {
         takeDamage(50);
         if (playerHealth > 0) {
             resetPlayer();
+            positionPlayerOnFirstPlatform();
         }
     }
     
